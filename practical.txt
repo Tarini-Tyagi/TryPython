@@ -1,0 +1,62 @@
+Removing the HDD:
+
+stop the instance --- deattach volume (unmount)  [entry should not be there in fstab]
+		--delete volume
+in deattach it will be removed from amazon instance only
+On stoping the instance- and for deattach:- remove entry for fstab
+				    - unmount
+				    - then deattach 
+with the entry in fstab-- stop instance -- deattach vol >> instance will corrupt permanently
+
+
+
+root volume--os is installed
+/dev/xvda2 --- external drive
+
+$sudo fdisk /dev/xvdf
+$m
+
+----------------------------------------------------------------------------------
+To use a pd formated in ntfs in window additional lib required
+NTFS- single file, size > 4gb can be stored
+Fat32- can't store single file >4gb size
+xvdg
+xvdh
+1-create pv
+yum install 
+# pvcreate /dev/xvdg /dev/xvdh
+2- volume group -- space where you store all physical volume -- so they are in environment
+and we can attach
+#vgcreate adhoc/dev/xvdg /dev/xvdf
+#lvcreate --name networks --size=3G adhoc
+#mkfs.ext4 /dev/mapper/adhoc-networks
+#mkdir adnet
+#mount /dev/mapper/adhoc-networks adnet
+#df -hT --to see whether it is mount 
+few mb less space--partition table
+***after mount we can store the data
+#cd adnet/
+#touch q i u t j
+#ls
+
+mkfs.tabtab
+
+to unmount a volume device:
+#umount /dev/mapper/adhoc-networks
+target is busy------------o/p
+#cd ..
+#umount /dev/mapper/adhoc-networks
+#df -hT --- name has been removed but drive still available if we mount then it will again
+will be displayed
+to make mount permanent
+#vi /etc/fstab
+INSERT
+/dev/mapper/adhoc-networks /root/adnet  ext4 defaults 0 0
+:wq
+#init 6 --- to reboot
+
+--------------
+$sudo -i
+#df -hT
+
+
