@@ -1,0 +1,49 @@
+# Creating my own command in Linux using shell scripting
+
+show --- To create a new file
+show2 PATH --- To check the content of a existing file
+showcat FILE1 FILE2 --- To concat and show data of two files
+
+[Log in as root]
+step I - create your command
+Open teminal and do the following:
+
+vi show
+-----Inside show write what show will do-----
+#!/bin/bash
+
+show()
+{
+gedit new.txt
+}
+:wq (save and close the file)
+---------------------------------------------
+vi show2
+#!/bin/bash
+
+show2()
+{
+gedit $1
+}
+---------------------------------------------- 
+vi showcat
+#!/bin/bash
+
+showcat()
+{
+cat $1 $2
+}
+-------------------------------------------------
+
+Step II - Give your command execution permission
+In Terminal type:
+chmod +x show
+chmod +x show2
+chmod +x showcat
+
+Step III - To make changes permanent copy your file in bin so that bash can access it
+cp show /usr/bin
+cp show2 /usr/bin
+cp showcat /usr/bin
+
+Use them any other command in Linux
