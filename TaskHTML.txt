@@ -1,0 +1,18 @@
+Web protal:  [Tensorflow Playground]
+
+1)Upload Data:
+	Json
+	csv
+	xls
+2) Pass the uploaded data to pandas
+3)Show the uploaded data to user (top 10)
+4) Which classifier you want to use
+5) Ask for percentage for train and test data
+6) ask value of k
+7) when user submit show data in graph form [can be gauge] 
+
+
+3 Tasks:
+3- IRIS, Cancer -- compare with DTC and KNN
+2- Web portal
+1- Difference graph with 50, 60, 70 80 percentage
