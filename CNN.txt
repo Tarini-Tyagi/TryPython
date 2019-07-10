@@ -1,0 +1,20 @@
+CNN = Convocutional Neural Network
+For Mathematics - Numpy  [small work]
+                - Theano [complex work]
+				
+Keras is a modified version of tensorflow. Keras can use tensorflow, theano
+dog/cat Classifier by CNN = Keras
+
+In CNN, each neuron will send data to every neuron of next hidden layer
+For working on ANN -gpu is not a must
+but for CNN gpu is must. CNN was designed for image classification or img processing [advance version of opencv]
+For CNN min gpu requirement = 2GB gpu
+10,000 images for processing
+
+
+IN ANN - from output to input = Back Propagation
+       - from input to output = Forward propagation
+	   
+.....................................................................................................................	   
+Integrating lambda with dynamodb
+how to make own search engine
